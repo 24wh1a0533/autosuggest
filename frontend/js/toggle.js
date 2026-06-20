@@ -2,12 +2,12 @@ var users = [
     {
         "name" : "John",
         "gender" : "Male",
-        "image" : "/images/john autouggest.png"
+        "image" : "/image/john autouggest.png"
     },
     {
         "name" : "Janey",
         "gender" : "Female",
-        "image" : "/images/janey autosuggest.png"
+        "image" : "/image/janey autosuggest.png"
     }
 ]
 var curid = 0;
