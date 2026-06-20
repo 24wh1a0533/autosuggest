@@ -25,4 +25,4 @@ function toggle(){
     //gender
     document.getElementById("user-Gender").innerText=user.gender;
 
-}TOGGLE.JS
+}
