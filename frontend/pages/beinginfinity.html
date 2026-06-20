@@ -1,13 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/beinginfinity.css">
-
-    <title>BeingInfinity</title>
 </head>
 <body>
 
@@ -25,9 +20,49 @@
         Prefix Based Auto Suggest.
     </p>
 
-    <input type="text" placeholder="Start typing to search phrase...">
+    <input type="text" id="search" placeholder="Start typing to search phrase...">
+
+    <div id="suggestions"></div>
 
 </div>
+
+<script>
+const phrases = [
+    "html",
+    "css",
+    "javascript",
+    "java",
+    "python",
+    "react",
+    "nodejs"
+];
+
+const search = document.getElementById("search");
+const suggestions = document.getElementById("suggestions");
+
+search.addEventListener("keyup", function () {
+
+    let value = search.value.toLowerCase();
+    suggestions.innerHTML = "";
+
+    if(value === "") return;
+
+    phrases.forEach(function(item){
+
+        if(item.startsWith(value)){
+            let p = document.createElement("p");
+            p.innerText = item;
+
+            p.onclick = function(){
+                search.value = item;
+                suggestions.innerHTML = "";
+            };
+
+            suggestions.appendChild(p);
+        }
+    });
+});
+</script>
 
 </body>
 </html>
