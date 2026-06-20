@@ -1,3 +1,41 @@
 h1 {
-    color: red;
+    color:red;
+}
+
+#heading-2{
+    color:blue;
+}
+ 
+.heading{
+    color:orange;
+}
+
+.para{
+    border:2px;
+    border-color:black;
+    border-style:solid;
+    padding:20px;
+    text-align:center;
+}
+
+.navbar{
+    border:3px;
+    border-style:solid;
+    border-color:black;
+    padding:15px;
+    background-color:brown;
+    text-align:center;
+}
+
+.navbar a{
+    color:aquamarine;
+    padding:10px;
+    text-decoration:none;
+}
+
+.navbar a:hover{
+    background-color:rgb(152, 163, 97);
+}
+body{
+    margin:0px;
 }
